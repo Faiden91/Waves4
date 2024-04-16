@@ -7,6 +7,7 @@
 #include "Renderer.h"
 #include "InputManager.h"
 #include "BSPMap.h"
+#include "NewRenderer.h"
 
 
 int main(void) {
@@ -38,10 +39,11 @@ int main(void) {
     Shader sceneShader("shader.vert", "shader.frag");
     Shader textureShader("texture.vert", "texture.frag");
     // Camera initialization (positioned at (0,0,3) looking down -Z axis in this case)
-    Camera myCamera(glm::vec3(32.0f, 128.0f, 24.0f));
-    unsigned int textureID = TextureLoader::LoadTexture("C:/Users/black/source/repos/CameraTest/redtexture.jpg");
+    Camera myCamera(glm::vec3(1.25f, 0.0f, 3.0f));
+    unsigned int textureID = TextureLoader::LoadTexture("redtexture.jpg");
+    unsigned int textureIDF = TextureLoader::LoadTexture("YellowTexture.jpg");
     // Renderer initialization
-    Renderer myRenderer(sceneShader, textureShader, &myCamera, textureID);
+    NewRenderer myRenderer(sceneShader, textureShader, &myCamera, textureID, textureIDF);
 
     // Assuming camera has already been created
     InputManager inputManager(&myCamera);

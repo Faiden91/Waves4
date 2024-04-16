@@ -57,6 +57,9 @@
     <ClInclude Include="BSPMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="NewRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -80,9 +83,15 @@
     <ClCompile Include="BSPMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="NewRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="redtexture.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="YellowTexture.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

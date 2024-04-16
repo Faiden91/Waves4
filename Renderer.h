@@ -25,11 +25,14 @@ public:
     void Render();
     void RenderScene();
     void TextureRenderer(unsigned int texture);
+    void FaceRenderer(unsigned int texture);
 
 
 private:
     void initTextureRenderData();
+    void initFaceTRData();
     GLuint quadVAO = 0, quadVBO = 0, quadEBO = 0; // VAO and VBO for the quad
+    GLuint quadFVAO = 0, quadFVBO = 0, quadFEBO = 0; // VAO and VBO for the quad
 };
 
 #endif // RENDERER_H
